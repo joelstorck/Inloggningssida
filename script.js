@@ -25,6 +25,14 @@ let tryAgainNode = document.createTextNode("Try Again!");
     tryAgain.setAttribute("id", "tryAgain");
     tryAgain.appendChild(tryAgainNode);
 
+    // Testar funktioner
+    function showSuccess() {
+        document.body.appendChild(succesfulDiv).style.display = "block";
+        console.log("HEJ HEJ HEJ");
+    };
+    
+    // showSuccess();
+
 let checkLS = localStorage.getItem("username");
 if(checkLS){
     document.body.appendChild(succesfulDiv).style.display = "block";
@@ -56,6 +64,11 @@ document.getElementById("login").addEventListener("click",function() {
         document.body.appendChild(start).style.display = "none";
         document.body.appendChild(failedDiv).style.display = "block";
 
-        
+    
     }
+    
+    document.getElementById("tryAgain").addEventListener("click",function() {
+        document.body.appendChild(start).style.display = "block";
+        document.body.appendChild(failedDiv).style.display = "none";
+        })
 });
