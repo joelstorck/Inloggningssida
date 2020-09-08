@@ -14,7 +14,7 @@ let tryAgainNode = document.createTextNode("Try Again!");
     succesfulDiv.setAttribute("id", "succesfulDiv");
     succesfulDiv.appendChild(welcomeMessage);
     succesfulDiv.appendChild(signOut);
-    welcomeMessage.innerHTML = "<strong>" + "Hello " + "</strong>" + "<i>" + localStorage.getItem("username") + "</i>" + "<strong>" + " my" + " excellency!" + "</strong>";
+    welcomeMessage.innerHTML = "<strong>" + "Hello " + "</strong>" + "<i>" + (namn) + "</i>" + "<strong>" + " my" + " excellency!" + "</strong>";
     signOut.setAttribute("id", "signOut");
     signOut.appendChild(signOutNode);
 
