@@ -10,11 +10,12 @@ let failedDiv = document.createElement("div");
 let notWelcomeMessage = document.createElement("p");
 let tryAgain = document.createElement("button");
 let tryAgainNode = document.createTextNode("Try Again!");
-    
+
+    //Skapar div's för "Välkommen sida och felaktig inloggning"
     succesfulDiv.setAttribute("id", "succesfulDiv");
     succesfulDiv.appendChild(welcomeMessage);
     succesfulDiv.appendChild(signOut);
-    welcomeMessage.innerHTML = "<strong>" + "Hello " + "</strong>" + "<i>" + (namn) + "</i>" + "<strong>" + " my" + " excellency!" + "</strong>";
+    welcomeMessage.innerHTML = "<strong>" + "Hello and welcome " + "</strong>" + "<i>" + (namn) + "</i>" + "<strong>" + " my" + " excellency!" + "</strong>";
     signOut.setAttribute("id", "signOut");
     signOut.appendChild(signOutNode);
 
@@ -25,6 +26,7 @@ let tryAgainNode = document.createTextNode("Try Again!");
     tryAgain.setAttribute("id", "tryAgain");
     tryAgain.appendChild(tryAgainNode);
 
+// Kontrollerar om det finns lagrad info i localstorage, om det finns visas "Välkommen" sidan
 let checkLS = localStorage.getItem("username");
     if(checkLS){
         showSuccess();
@@ -32,6 +34,7 @@ let checkLS = localStorage.getItem("username");
     else {
     showStart();
 }
+// För att visa startsidan
 function showStart(){
     document.body.appendChild(start).style.display = "block";
     document.body.appendChild(failedDiv).style.display = "none";
@@ -56,7 +59,8 @@ function showStart(){
         }
     });
 }
-    
+
+// För att visa "Välkommen" sidan
 function showSuccess() {
     document.body.appendChild(succesfulDiv).style.display = "block";
     document.body.appendChild(failedDiv).style.display = "none";
@@ -71,6 +75,7 @@ function showSuccess() {
             })
     }
 
+// För att visa sida felaktig inloggning
 function showFailed(){
     document.body.appendChild(succesfulDiv).style.display = "none";
     document.body.appendChild(failedDiv).style.display = "block";
