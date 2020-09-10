@@ -65,6 +65,8 @@ function showSuccess() {
         document.getElementById("signOut").addEventListener("click",function() {
             localStorage.removeItem("username");
             localStorage.removeItem("password");  
+            document.getElementById("user").value = "";
+            document.getElementById("password").value = "";
             showStart();
             })
     }
