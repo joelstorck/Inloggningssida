@@ -26,6 +26,9 @@ let tryAgainNode = document.createTextNode("Try Again!");
     tryAgain.setAttribute("id", "tryAgain");
     tryAgain.appendChild(tryAgainNode);
 
+    document.getElementById("user").value = "";
+    document.getElementById("password").value = "";
+
 // Kontrollerar om det finns lagrad info i localstorage, om det finns visas "Välkommen" sidan
 let checkLS = localStorage.getItem("username");
     if(checkLS){
