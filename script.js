@@ -53,8 +53,6 @@ function showStart(){
                 localStorage.setItem("password", password);
                 document.body.appendChild(succesfulDiv).style.display = "block";
                 document.body.appendChild(start).style.display = "none";
-                    console.log(username);
-                    console.log(password);
                     showSuccess();
             }
             else {
