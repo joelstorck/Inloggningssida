@@ -77,6 +77,8 @@ function showFailed(){
     document.body.appendChild(start).style.display = "none";
         
         document.getElementById("tryAgain").addEventListener("click",function() {
+            document.getElementById("user").value = "";
+            document.getElementById("password").value = "";
             showStart();
             })
 }
